@@ -98,53 +98,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controlCartItem.cs">
+    <Compile Include="UserControl\controlCartItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controlCartItem.Designer.cs">
+    <Compile Include="UserControl\controlCartItem.Designer.cs">
       <DependentUpon>controlCartItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="controlCartSummaryItem.cs">
+    <Compile Include="UserControl\controlCartSummaryItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controlCartSummaryItem.Designer.cs">
+    <Compile Include="UserControl\controlCartSummaryItem.Designer.cs">
       <DependentUpon>controlCartSummaryItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCheckout.cs">
+    <Compile Include="Forms\frmCheckout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCheckout.Designer.cs">
+    <Compile Include="Forms\frmCheckout.Designer.cs">
       <DependentUpon>frmCheckout.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustNamePrompt.cs">
+    <Compile Include="Forms\frmCustNamePrompt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustNamePrompt.Designer.cs">
+    <Compile Include="Forms\frmCustNamePrompt.Designer.cs">
       <DependentUpon>frmCustNamePrompt.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddItem.cs">
+    <Compile Include="Forms\frmAddItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddItem.Designer.cs">
+    <Compile Include="Forms\frmAddItem.Designer.cs">
       <DependentUpon>frmAddItem.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\IDataConnection.cs" />
-    <Compile Include="frmProductDashboard.cs">
+    <Compile Include="Forms\frmProductDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductDashboard.Designer.cs">
+    <Compile Include="Forms\frmProductDashboard.Designer.cs">
       <DependentUpon>frmProductDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReceipt.cs">
+    <Compile Include="Forms\frmReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReceipt.Designer.cs">
+    <Compile Include="Forms\frmReceipt.Designer.cs">
       <DependentUpon>frmReceipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStartPage.cs">
+    <Compile Include="Forms\frmStartPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStartPage.Designer.cs">
+    <Compile Include="Forms\frmStartPage.Designer.cs">
       <DependentUpon>frmStartPage.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalConfig.cs" />
@@ -208,10 +208,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmOrderPage.cs">
+    <Compile Include="Forms\frmOrderPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOrderPage.Designer.cs">
+    <Compile Include="Forms\frmOrderPage.Designer.cs">
       <DependentUpon>frmOrderPage.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductTableDataset_NEW.Designer.cs">
@@ -222,38 +222,38 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataAccess\SqlConnector.cs" />
-    <Compile Include="controlProductCard.cs">
+    <Compile Include="UserControl\controlProductCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controlProductCard.Designer.cs">
+    <Compile Include="UserControl\controlProductCard.Designer.cs">
       <DependentUpon>controlProductCard.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="controlCartItem.resx">
+    <EmbeddedResource Include="UserControl\controlCartItem.resx">
       <DependentUpon>controlCartItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controlCartSummaryItem.resx">
+    <EmbeddedResource Include="UserControl\controlCartSummaryItem.resx">
       <DependentUpon>controlCartSummaryItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCheckout.resx">
+    <EmbeddedResource Include="Forms\frmCheckout.resx">
       <DependentUpon>frmCheckout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustNamePrompt.resx">
+    <EmbeddedResource Include="Forms\frmCustNamePrompt.resx">
       <DependentUpon>frmCustNamePrompt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddItem.resx">
+    <EmbeddedResource Include="Forms\frmAddItem.resx">
       <DependentUpon>frmAddItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProductDashboard.resx">
+    <EmbeddedResource Include="Forms\frmProductDashboard.resx">
       <DependentUpon>frmProductDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOrderPage.resx">
+    <EmbeddedResource Include="Forms\frmOrderPage.resx">
       <DependentUpon>frmOrderPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReceipt.resx">
+    <EmbeddedResource Include="Forms\frmReceipt.resx">
       <DependentUpon>frmReceipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStartPage.resx">
+    <EmbeddedResource Include="Forms\frmStartPage.resx">
       <DependentUpon>frmStartPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -266,7 +266,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="controlProductCard.resx">
+    <EmbeddedResource Include="UserControl\controlProductCard.resx">
       <DependentUpon>controlProductCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionReport.rdlc" />

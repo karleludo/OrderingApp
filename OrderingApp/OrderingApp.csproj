@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B4D1939-DBA5-4A03-B94D-D290ECC6BCB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OrderingApp</RootNamespace>
+    <AssemblyName>OrderingApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\k_eludo\Desktop\OrderingAppTrial\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>481A0A42A38A77E29E4ED9EE158DC97DEF3CC8CB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OrderingApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controlCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlCartItem.Designer.cs">
+      <DependentUpon>controlCartItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlCartSummaryItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlCartSummaryItem.Designer.cs">
+      <DependentUpon>controlCartSummaryItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckout.Designer.cs">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustNamePrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustNamePrompt.Designer.cs">
+      <DependentUpon>frmCustNamePrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddItem.Designer.cs">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\IDataConnection.cs" />
+    <Compile Include="frmProductDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductDashboard.Designer.cs">
+      <DependentUpon>frmProductDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceipt.Designer.cs">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStartPage.Designer.cs">
+      <DependentUpon>frmStartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalConfig.cs" />
+    <Compile Include="Models\OrderLineModel.cs" />
+    <Compile Include="Models\OrderLineView.cs" />
+    <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="OrderingAppDBSQLmanageDataSet.cs">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageDATASETFINAL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageDATASETFINAL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppDBSQLmanageProductCategory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppDBSQLmanageProductCategory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppProducts.cs">
+      <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingAppProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderPage.Designer.cs">
+      <DependentUpon>frmOrderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductTableDataset_NEW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductTableDataset_NEW.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataAccess\SqlConnector.cs" />
+    <Compile Include="controlProductCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlProductCard.Designer.cs">
+      <DependentUpon>controlProductCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDLCPrinter\RDLCDemo\NorthwindDataSet.cs">
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="controlCartItem.resx">
+      <DependentUpon>controlCartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlCartSummaryItem.resx">
+      <DependentUpon>controlCartSummaryItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckout.resx">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustNamePrompt.resx">
+      <DependentUpon>frmCustNamePrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddItem.resx">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductDashboard.resx">
+      <DependentUpon>frmProductDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderPage.resx">
+      <DependentUpon>frmOrderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceipt.resx">
+      <DependentUpon>frmReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStartPage.resx">
+      <DependentUpon>frmStartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="controlProductCard.resx">
+      <DependentUpon>controlProductCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionReport.rdlc" />
+    <None Include="OrderingAppDBSQLmanageDataSet.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet.xss">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet1.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet1.xss">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet2.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet2.xss">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet3.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet3.xss">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet4.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet4.xss">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet5.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet5.xss">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet6.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDataSet6.xss">
+      <DependentUpon>OrderingAppDBSQLmanageDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDATASETFINAL.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageDATASETFINAL.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDATASETFINAL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageDATASETFINAL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageDATASETFINAL.xss">
+      <DependentUpon>OrderingAppDBSQLmanageDATASETFINAL.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageProductCategory.xsc">
+      <DependentUpon>OrderingAppDBSQLmanageProductCategory.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppDBSQLmanageProductCategory.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppDBSQLmanageProductCategory.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppDBSQLmanageProductCategory.xss">
+      <DependentUpon>OrderingAppDBSQLmanageProductCategory.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppProducts.xsc">
+      <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingAppProducts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderingAppProducts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderingAppProducts.xss">
+      <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
+    </None>
+    <None Include="OrderingApp_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="ProductTableDataset_NEW.xsc">
+      <DependentUpon>ProductTableDataset_NEW.xsd</DependentUpon>
+    </None>
+    <None Include="ProductTableDataset_NEW.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductTableDataset_NEW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductTableDataset_NEW.xss">
+      <DependentUpon>ProductTableDataset_NEW.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\OrderingApp.Models.OrderLineView.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RDLCPrinter\RDLCDemo\NorthwindDataSet.xsc">
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RDLCPrinter\RDLCDemo\NorthwindDataSet.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\UI Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Product Images\imageDefault.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

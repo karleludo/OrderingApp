@@ -411,6 +411,7 @@
     <Folder Include="Images\UI Images\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database Script\OrderingAppDatabaseSchemaScript.sql" />
     <Content Include="Images\Product Images\imageDefault.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

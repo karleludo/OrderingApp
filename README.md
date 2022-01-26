@@ -10,4 +10,4 @@
 TODO - database setup tutorial
 
 ## Authors
-*Karl Glenn Eludo - [GitHub](https://github.com/karleludo)
+* Karl Glenn Eludo - [GitHub](https://github.com/karleludo)

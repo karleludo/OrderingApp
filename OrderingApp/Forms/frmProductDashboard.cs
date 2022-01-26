@@ -62,7 +62,6 @@ namespace OrderingApp
         {
             //TODO - validate edit form
 
-
             ProductModel Product = new ProductModel();
 
             Product = GetValuesFromForm();

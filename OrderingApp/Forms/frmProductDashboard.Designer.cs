@@ -96,10 +96,9 @@ namespace OrderingApp
             // 
             this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddItem.Location = new System.Drawing.Point(917, 6);
-            this.btnAddItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddItem.Location = new System.Drawing.Point(688, 5);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(221, 57);
+            this.btnAddItem.Size = new System.Drawing.Size(166, 46);
             this.btnAddItem.TabIndex = 0;
             this.btnAddItem.Text = "Add an item";
             this.btnAddItem.UseVisualStyleBackColor = true;
@@ -112,9 +111,8 @@ namespace OrderingApp
             this.panelHeader.BackColor = System.Drawing.Color.Goldenrod;
             this.panelHeader.Controls.Add(this.lblHeader);
             this.panelHeader.Location = new System.Drawing.Point(-1, -2);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1997, 86);
+            this.panelHeader.Size = new System.Drawing.Size(1563, 70);
             this.panelHeader.TabIndex = 1;
             // 
             // lblHeader
@@ -122,8 +120,7 @@ namespace OrderingApp
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblHeader.Location = new System.Drawing.Point(17, 14);
-            this.lblHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHeader.Location = new System.Drawing.Point(13, 11);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(205, 32);
             this.lblHeader.TabIndex = 0;
@@ -137,18 +134,16 @@ namespace OrderingApp
             this.panelDataView.Controls.Add(this.btnRefresh);
             this.panelDataView.Controls.Add(this.dgvItemView);
             this.panelDataView.Controls.Add(this.btnAddItem);
-            this.panelDataView.Location = new System.Drawing.Point(17, 91);
-            this.panelDataView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDataView.Location = new System.Drawing.Point(13, 74);
             this.panelDataView.Name = "panelDataView";
-            this.panelDataView.Size = new System.Drawing.Size(1144, 1095);
+            this.panelDataView.Size = new System.Drawing.Size(858, 1000);
             this.panelDataView.TabIndex = 3;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(779, 6);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Location = new System.Drawing.Point(584, 5);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(131, 57);
+            this.btnRefresh.Size = new System.Drawing.Size(98, 46);
             this.btnRefresh.TabIndex = 5;
             this.btnRefresh.Text = "Refresh table";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -173,14 +168,13 @@ namespace OrderingApp
             this.ImageByte,
             this.Price});
             this.dgvItemView.DataSource = this.productBindingSource;
-            this.dgvItemView.Location = new System.Drawing.Point(7, 70);
-            this.dgvItemView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvItemView.Location = new System.Drawing.Point(3, 57);
             this.dgvItemView.MultiSelect = false;
             this.dgvItemView.Name = "dgvItemView";
             this.dgvItemView.ReadOnly = true;
             this.dgvItemView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvItemView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItemView.Size = new System.Drawing.Size(1132, 1022);
+            this.dgvItemView.Size = new System.Drawing.Size(849, 837);
             this.dgvItemView.TabIndex = 3;
             this.dgvItemView.SelectionChanged += new System.EventHandler(this.dgvItemView_SelectionChanged);
             // 
@@ -274,10 +268,9 @@ namespace OrderingApp
             this.panelEditItem.Controls.Add(this.lblSelectedItemId);
             this.panelEditItem.Controls.Add(this.lblProductId);
             this.panelEditItem.Controls.Add(this.label1);
-            this.panelEditItem.Location = new System.Drawing.Point(1169, 137);
-            this.panelEditItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEditItem.Location = new System.Drawing.Point(877, 111);
             this.panelEditItem.Name = "panelEditItem";
-            this.panelEditItem.Size = new System.Drawing.Size(809, 839);
+            this.panelEditItem.Size = new System.Drawing.Size(629, 682);
             this.panelEditItem.TabIndex = 4;
             // 
             // lblAvailNote
@@ -285,10 +278,9 @@ namespace OrderingApp
             this.lblAvailNote.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAvailNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailNote.Location = new System.Drawing.Point(563, 498);
-            this.lblAvailNote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvailNote.Location = new System.Drawing.Point(419, 405);
             this.lblAvailNote.Name = "lblAvailNote";
-            this.lblAvailNote.Size = new System.Drawing.Size(232, 198);
+            this.lblAvailNote.Size = new System.Drawing.Size(157, 161);
             this.lblAvailNote.TabIndex = 18;
             this.lblAvailNote.Text = "note: disabling the \r\n\"in Stock\" flag will make the item \"unavailable\" but the st" +
     "ock quantity remains.";
@@ -303,28 +295,24 @@ namespace OrderingApp
             this.gbAvailability.Controls.Add(this.btnAddStock);
             this.gbAvailability.Controls.Add(this.tbStockAmount);
             this.gbAvailability.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbAvailability.Location = new System.Drawing.Point(12, 485);
-            this.gbAvailability.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAvailability.Location = new System.Drawing.Point(9, 394);
             this.gbAvailability.Name = "gbAvailability";
-            this.gbAvailability.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbAvailability.Size = new System.Drawing.Size(532, 212);
+            this.gbAvailability.Size = new System.Drawing.Size(399, 172);
             this.gbAvailability.TabIndex = 17;
             this.gbAvailability.TabStop = false;
             this.gbAvailability.Text = "Availability";
             // 
             // nudModifyValue
             // 
-            this.nudModifyValue.Location = new System.Drawing.Point(321, 126);
-            this.nudModifyValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudModifyValue.Location = new System.Drawing.Point(241, 102);
             this.nudModifyValue.Name = "nudModifyValue";
-            this.nudModifyValue.Size = new System.Drawing.Size(160, 29);
+            this.nudModifyValue.Size = new System.Drawing.Size(120, 29);
             this.nudModifyValue.TabIndex = 19;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(265, 128);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(199, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 21);
             this.label7.TabIndex = 18;
@@ -333,8 +321,7 @@ namespace OrderingApp
             // lblStockAmount
             // 
             this.lblStockAmount.AutoSize = true;
-            this.lblStockAmount.Location = new System.Drawing.Point(25, 48);
-            this.lblStockAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStockAmount.Location = new System.Drawing.Point(19, 39);
             this.lblStockAmount.Name = "lblStockAmount";
             this.lblStockAmount.Size = new System.Drawing.Size(118, 21);
             this.lblStockAmount.TabIndex = 17;
@@ -344,8 +331,7 @@ namespace OrderingApp
             // 
             this.cbInStock.AutoSize = true;
             this.cbInStock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbInStock.Location = new System.Drawing.Point(361, 47);
-            this.cbInStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbInStock.Location = new System.Drawing.Point(271, 38);
             this.cbInStock.Name = "cbInStock";
             this.cbInStock.Size = new System.Drawing.Size(83, 25);
             this.cbInStock.TabIndex = 16;
@@ -354,10 +340,9 @@ namespace OrderingApp
             // 
             // btnDecreaseStock
             // 
-            this.btnDecreaseStock.Location = new System.Drawing.Point(128, 146);
-            this.btnDecreaseStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDecreaseStock.Location = new System.Drawing.Point(96, 119);
             this.btnDecreaseStock.Name = "btnDecreaseStock";
-            this.btnDecreaseStock.Size = new System.Drawing.Size(129, 48);
+            this.btnDecreaseStock.Size = new System.Drawing.Size(97, 39);
             this.btnDecreaseStock.TabIndex = 11;
             this.btnDecreaseStock.Text = "decrease";
             this.btnDecreaseStock.UseVisualStyleBackColor = true;
@@ -365,10 +350,9 @@ namespace OrderingApp
             // 
             // btnAddStock
             // 
-            this.btnAddStock.Location = new System.Drawing.Point(128, 90);
-            this.btnAddStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddStock.Location = new System.Drawing.Point(96, 73);
             this.btnAddStock.Name = "btnAddStock";
-            this.btnAddStock.Size = new System.Drawing.Size(129, 49);
+            this.btnAddStock.Size = new System.Drawing.Size(97, 40);
             this.btnAddStock.TabIndex = 10;
             this.btnAddStock.Text = "add";
             this.btnAddStock.UseVisualStyleBackColor = true;
@@ -377,12 +361,11 @@ namespace OrderingApp
             // tbStockAmount
             // 
             this.tbStockAmount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStockAmount.Location = new System.Drawing.Point(191, 34);
-            this.tbStockAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbStockAmount.Location = new System.Drawing.Point(143, 28);
             this.tbStockAmount.MaxLength = 4;
             this.tbStockAmount.Name = "tbStockAmount";
             this.tbStockAmount.ReadOnly = true;
-            this.tbStockAmount.Size = new System.Drawing.Size(132, 39);
+            this.tbStockAmount.Size = new System.Drawing.Size(100, 39);
             this.tbStockAmount.TabIndex = 9;
             this.tbStockAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbStockAmount.TextChanged += new System.EventHandler(this.tbStockAmount_TextChanged);
@@ -392,11 +375,9 @@ namespace OrderingApp
             this.gbEditPrice.Controls.Add(this.lblCurSign);
             this.gbEditPrice.Controls.Add(this.tbPrice);
             this.gbEditPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEditPrice.Location = new System.Drawing.Point(12, 704);
-            this.gbEditPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbEditPrice.Location = new System.Drawing.Point(9, 572);
             this.gbEditPrice.Name = "gbEditPrice";
-            this.gbEditPrice.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbEditPrice.Size = new System.Drawing.Size(532, 117);
+            this.gbEditPrice.Size = new System.Drawing.Size(399, 95);
             this.gbEditPrice.TabIndex = 15;
             this.gbEditPrice.TabStop = false;
             this.gbEditPrice.Text = "Edit Price:";
@@ -405,8 +386,7 @@ namespace OrderingApp
             // 
             this.lblCurSign.AutoSize = true;
             this.lblCurSign.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurSign.Location = new System.Drawing.Point(23, 46);
-            this.lblCurSign.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCurSign.Location = new System.Drawing.Point(17, 37);
             this.lblCurSign.Name = "lblCurSign";
             this.lblCurSign.Size = new System.Drawing.Size(30, 32);
             this.lblCurSign.TabIndex = 1;
@@ -415,19 +395,17 @@ namespace OrderingApp
             // tbPrice
             // 
             this.tbPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPrice.Location = new System.Drawing.Point(64, 46);
-            this.tbPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPrice.Location = new System.Drawing.Point(48, 37);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.ReadOnly = true;
-            this.tbPrice.Size = new System.Drawing.Size(416, 39);
+            this.tbPrice.Size = new System.Drawing.Size(313, 39);
             this.tbPrice.TabIndex = 0;
             // 
             // lblImageStatus
             // 
             this.lblImageStatus.AutoSize = true;
             this.lblImageStatus.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImageStatus.Location = new System.Drawing.Point(609, 87);
-            this.lblImageStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblImageStatus.Location = new System.Drawing.Point(457, 71);
             this.lblImageStatus.Name = "lblImageStatus";
             this.lblImageStatus.Size = new System.Drawing.Size(130, 20);
             this.lblImageStatus.TabIndex = 11;
@@ -436,10 +414,9 @@ namespace OrderingApp
             // btnChangeImage
             // 
             this.btnChangeImage.Enabled = false;
-            this.btnChangeImage.Location = new System.Drawing.Point(333, 73);
-            this.btnChangeImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChangeImage.Location = new System.Drawing.Point(250, 59);
             this.btnChangeImage.Name = "btnChangeImage";
-            this.btnChangeImage.Size = new System.Drawing.Size(267, 48);
+            this.btnChangeImage.Size = new System.Drawing.Size(200, 39);
             this.btnChangeImage.TabIndex = 10;
             this.btnChangeImage.Text = "Change Product Image";
             this.btnChangeImage.UseVisualStyleBackColor = true;
@@ -452,10 +429,9 @@ namespace OrderingApp
             this.pBoxProductImage.ErrorImage = global::OrderingApp.Properties.Resources.imageDefault;
             this.pBoxProductImage.Image = global::OrderingApp.Properties.Resources.imageDefault;
             this.pBoxProductImage.InitialImage = global::OrderingApp.Properties.Resources.imageDefault;
-            this.pBoxProductImage.Location = new System.Drawing.Point(12, 73);
-            this.pBoxProductImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBoxProductImage.Location = new System.Drawing.Point(9, 59);
             this.pBoxProductImage.Name = "pBoxProductImage";
-            this.pBoxProductImage.Size = new System.Drawing.Size(301, 393);
+            this.pBoxProductImage.Size = new System.Drawing.Size(227, 320);
             this.pBoxProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBoxProductImage.TabIndex = 7;
             this.pBoxProductImage.TabStop = false;
@@ -464,11 +440,10 @@ namespace OrderingApp
             // tbEditProductName
             // 
             this.tbEditProductName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEditProductName.Location = new System.Drawing.Point(333, 185);
-            this.tbEditProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEditProductName.Location = new System.Drawing.Point(250, 150);
             this.tbEditProductName.Name = "tbEditProductName";
             this.tbEditProductName.ReadOnly = true;
-            this.tbEditProductName.Size = new System.Drawing.Size(460, 29);
+            this.tbEditProductName.Size = new System.Drawing.Size(369, 29);
             this.tbEditProductName.TabIndex = 6;
             // 
             // rtbEditProductDescription
@@ -476,11 +451,10 @@ namespace OrderingApp
             this.rtbEditProductDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbEditProductDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbEditProductDescription.Location = new System.Drawing.Point(333, 265);
-            this.rtbEditProductDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbEditProductDescription.Location = new System.Drawing.Point(250, 215);
             this.rtbEditProductDescription.Name = "rtbEditProductDescription";
             this.rtbEditProductDescription.ReadOnly = true;
-            this.rtbEditProductDescription.Size = new System.Drawing.Size(460, 201);
+            this.rtbEditProductDescription.Size = new System.Drawing.Size(369, 164);
             this.rtbEditProductDescription.TabIndex = 5;
             this.rtbEditProductDescription.Text = "";
             // 
@@ -488,8 +462,7 @@ namespace OrderingApp
             // 
             this.lblProductDesc.AutoSize = true;
             this.lblProductDesc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductDesc.Location = new System.Drawing.Point(328, 235);
-            this.lblProductDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductDesc.Location = new System.Drawing.Point(246, 191);
             this.lblProductDesc.Name = "lblProductDesc";
             this.lblProductDesc.Size = new System.Drawing.Size(154, 21);
             this.lblProductDesc.TabIndex = 4;
@@ -499,8 +472,7 @@ namespace OrderingApp
             // 
             this.lblProductName.AutoSize = true;
             this.lblProductName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductName.Location = new System.Drawing.Point(328, 155);
-            this.lblProductName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductName.Location = new System.Drawing.Point(246, 126);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(117, 21);
             this.lblProductName.TabIndex = 3;
@@ -510,8 +482,7 @@ namespace OrderingApp
             // 
             this.lblSelectedItemId.AutoSize = true;
             this.lblSelectedItemId.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedItemId.Location = new System.Drawing.Point(131, 44);
-            this.lblSelectedItemId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSelectedItemId.Location = new System.Drawing.Point(98, 36);
             this.lblSelectedItemId.Name = "lblSelectedItemId";
             this.lblSelectedItemId.Size = new System.Drawing.Size(21, 20);
             this.lblSelectedItemId.TabIndex = 2;
@@ -521,8 +492,7 @@ namespace OrderingApp
             // 
             this.lblProductId.AutoSize = true;
             this.lblProductId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductId.Location = new System.Drawing.Point(7, 43);
-            this.lblProductId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductId.Location = new System.Drawing.Point(5, 35);
             this.lblProductId.Name = "lblProductId";
             this.lblProductId.Size = new System.Drawing.Size(90, 21);
             this.lblProductId.TabIndex = 1;
@@ -532,8 +502,7 @@ namespace OrderingApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 25);
             this.label1.TabIndex = 0;
@@ -545,10 +514,9 @@ namespace OrderingApp
             // 
             // btnEditSelectedItem
             // 
-            this.btnEditSelectedItem.Location = new System.Drawing.Point(1169, 92);
-            this.btnEditSelectedItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditSelectedItem.Location = new System.Drawing.Point(877, 75);
             this.btnEditSelectedItem.Name = "btnEditSelectedItem";
-            this.btnEditSelectedItem.Size = new System.Drawing.Size(336, 37);
+            this.btnEditSelectedItem.Size = new System.Drawing.Size(252, 30);
             this.btnEditSelectedItem.TabIndex = 5;
             this.btnEditSelectedItem.Text = "Edit selected Item";
             this.btnEditSelectedItem.UseVisualStyleBackColor = true;
@@ -558,10 +526,9 @@ namespace OrderingApp
             // 
             this.btnSaveChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveChanges.Enabled = false;
-            this.btnSaveChanges.Location = new System.Drawing.Point(1576, 998);
-            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveChanges.Location = new System.Drawing.Point(1204, 799);
             this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(403, 70);
+            this.btnSaveChanges.Size = new System.Drawing.Size(302, 57);
             this.btnSaveChanges.TabIndex = 6;
             this.btnSaveChanges.Text = "Save Changes";
             this.btnSaveChanges.UseVisualStyleBackColor = true;
@@ -571,10 +538,9 @@ namespace OrderingApp
             // 
             this.btnCancelChanges.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelChanges.Enabled = false;
-            this.btnCancelChanges.Location = new System.Drawing.Point(1732, 1076);
-            this.btnCancelChanges.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelChanges.Location = new System.Drawing.Point(1321, 862);
             this.btnCancelChanges.Name = "btnCancelChanges";
-            this.btnCancelChanges.Size = new System.Drawing.Size(247, 52);
+            this.btnCancelChanges.Size = new System.Drawing.Size(185, 42);
             this.btnCancelChanges.TabIndex = 7;
             this.btnCancelChanges.Text = "Cancel";
             this.btnCancelChanges.UseVisualStyleBackColor = true;
@@ -584,10 +550,9 @@ namespace OrderingApp
             // 
             this.btnDeleteSelectedItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteSelectedItem.Enabled = false;
-            this.btnDeleteSelectedItem.Location = new System.Drawing.Point(1376, 998);
-            this.btnDeleteSelectedItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteSelectedItem.Location = new System.Drawing.Point(1047, 799);
             this.btnDeleteSelectedItem.Name = "btnDeleteSelectedItem";
-            this.btnDeleteSelectedItem.Size = new System.Drawing.Size(192, 70);
+            this.btnDeleteSelectedItem.Size = new System.Drawing.Size(144, 57);
             this.btnDeleteSelectedItem.TabIndex = 8;
             this.btnDeleteSelectedItem.Text = "Delete selected Item";
             this.btnDeleteSelectedItem.UseVisualStyleBackColor = true;
@@ -608,9 +573,9 @@ namespace OrderingApp
             // 
             // frmProductDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.ClientSize = new System.Drawing.Size(1508, 972);
             this.Controls.Add(this.btnDeleteSelectedItem);
             this.Controls.Add(this.btnCancelChanges);
             this.Controls.Add(this.btnSaveChanges);
@@ -618,7 +583,6 @@ namespace OrderingApp
             this.Controls.Add(this.panelEditItem);
             this.Controls.Add(this.panelDataView);
             this.Controls.Add(this.panelHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProductDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator Product Dashboard";

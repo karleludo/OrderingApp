@@ -1,13 +1,9 @@
 ﻿using Dapper;
 using OrderingApp.DataAccess;
 using OrderingApp.Models;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderingApp
@@ -23,14 +19,14 @@ namespace OrderingApp
         private const string db = "OrderingAppDB";
         public ProductModel CreateProduct(ProductModel model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db))) 
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var p = new DynamicParameters();
                 p.Add("@Name", model.ProductName);
                 p.Add("@Description", model.ProductDescription);
                 p.Add("@ImageByte", model.ProductImageByte, dbType: DbType.Binary);
                 p.Add("@ProductId", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
-                p.Add("@CategoryId", model.ProductCategoryId );
+                p.Add("@CategoryId", model.ProductCategoryId);
                 p.Add("@StockQuantity", model.ProductStockQuantity);
 
                 connection.Execute("dbo.spProduct_Insert", p, commandType: CommandType.StoredProcedure);
@@ -53,16 +49,16 @@ namespace OrderingApp
                 p.Add("@StockQuantity", model.ProductStockQuantity);
                 p.Add("@Price", model.ProductPrice);
                 p.Add("@inStock", model.ProductinStock);
-    
+
                 connection.Execute("dbo.spProduct_Update", p, commandType: CommandType.StoredProcedure);
 
                 return model;
             }
 
         }
-        public ProductModel DeleteProduct(ProductModel model) 
+        public ProductModel DeleteProduct(ProductModel model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db))) 
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
                 var p = new DynamicParameters();
                 p.Add("@ProductId", model.ProductId);
@@ -95,9 +91,9 @@ namespace OrderingApp
             {
                 throw;
             }
-            
+
         }
-        public OrderModel SaveOrder(OrderModel model) 
+        public OrderModel SaveOrder(OrderModel model)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
@@ -111,12 +107,12 @@ namespace OrderingApp
                 return model;
             }
         }
-        public List<OrderLineModel> SaveOrderLine(List<OrderLineModel> model, int OrderId) 
+        public List<OrderLineModel> SaveOrderLine(List<OrderLineModel> model, int OrderId)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                foreach (OrderLineModel orderline in model) 
-                {   
+                foreach (OrderLineModel orderline in model)
+                {
                     var p = new DynamicParameters();
                     p.Add("@OrderId", OrderId);
                     p.Add("@ProductId", orderline.ProductId);
@@ -133,7 +129,7 @@ namespace OrderingApp
             //query order
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString(db)))
             {
-                
+
                 if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
@@ -171,7 +167,7 @@ namespace OrderingApp
                 //}
                 string qry = "SELECT [dbo].[Product].[Name], [dbo].[OrderLine].[Quantity], [dbo].[Product].[Price] " +
                                 "FROM [Product] INNER JOIN [OrderLine] ON [Product].[ProductId] = [OrderLine].[ProductId] " +
-                                $"WHERE [OrderLine].[OrderId] = {order.OrderId}" ;
+                                $"WHERE [OrderLine].[OrderId] = {order.OrderId}";
                 SqlConnection connection = new SqlConnection(GlobalConfig.CnnString(db));
                 SqlCommand cmd = new SqlCommand(qry, connection);
                 connection.Open();
@@ -180,10 +176,10 @@ namespace OrderingApp
                     using (SqlDataAdapter sda = new SqlDataAdapter())
                     {
                         sda.SelectCommand = cmd;
-                        
+
                         sda.Fill(dt);
                         connection.Close();
-                        
+
 
                     }
                 }

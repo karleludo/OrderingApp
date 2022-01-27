@@ -152,49 +152,6 @@
     <Compile Include="Models\OrderLineView.cs" />
     <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
-    <Compile Include="OrderingAppDBSQLmanageDataSet.cs">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingAppDBSQLmanageDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderingAppDBSQLmanageDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingAppDBSQLmanageDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderingAppDBSQLmanageDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingAppDBSQLmanageDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderingAppDBSQLmanageDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingAppDBSQLmanageDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderingAppDBSQLmanageDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingAppDBSQLmanageDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderingAppDBSQLmanageDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingAppDBSQLmanageDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderingAppDBSQLmanageDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingAppDBSQLmanageDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderingAppDBSQLmanageDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingAppDBSQLmanageDATASETFINAL.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrderingAppDBSQLmanageDATASETFINAL.xsd</DependentUpon>
-    </Compile>
     <Compile Include="OrderingAppDBSQLmanageProductCategory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,11 +170,6 @@
     </Compile>
     <Compile Include="Forms\frmOrderPage.Designer.cs">
       <DependentUpon>frmOrderPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductTableDataset_NEW.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProductTableDataset_NEW.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -270,94 +222,6 @@
       <DependentUpon>controlProductCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionReport.rdlc" />
-    <None Include="OrderingAppDBSQLmanageDataSet.xsc">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrderingAppDBSQLmanageDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet.xss">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet1.xsc">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrderingAppDBSQLmanageDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet1.xss">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet2.xsc">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrderingAppDBSQLmanageDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet2.xss">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet3.xsc">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrderingAppDBSQLmanageDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet3.xss">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet4.xsc">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrderingAppDBSQLmanageDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet4.xss">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet5.xsc">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrderingAppDBSQLmanageDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet5.xss">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet6.xsc">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrderingAppDBSQLmanageDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDataSet6.xss">
-      <DependentUpon>OrderingAppDBSQLmanageDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDATASETFINAL.xsc">
-      <DependentUpon>OrderingAppDBSQLmanageDATASETFINAL.xsd</DependentUpon>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDATASETFINAL.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrderingAppDBSQLmanageDATASETFINAL.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrderingAppDBSQLmanageDATASETFINAL.xss">
-      <DependentUpon>OrderingAppDBSQLmanageDATASETFINAL.xsd</DependentUpon>
-    </None>
     <None Include="OrderingAppDBSQLmanageProductCategory.xsc">
       <DependentUpon>OrderingAppDBSQLmanageProductCategory.xsd</DependentUpon>
     </None>
@@ -382,17 +246,6 @@
     </None>
     <None Include="OrderingApp_TemporaryKey.pfx" />
     <None Include="packages.config" />
-    <None Include="ProductTableDataset_NEW.xsc">
-      <DependentUpon>ProductTableDataset_NEW.xsd</DependentUpon>
-    </None>
-    <None Include="ProductTableDataset_NEW.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProductTableDataset_NEW.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProductTableDataset_NEW.xss">
-      <DependentUpon>ProductTableDataset_NEW.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\OrderingApp.Models.OrderLineView.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -407,9 +260,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\UI Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database Script\OrderingAppDatabaseSchemaScript.sql" />
     <Content Include="Images\Product Images\imageDefault.png" />

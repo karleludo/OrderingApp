@@ -1,13 +1,7 @@
-﻿using Dapper;
-using OrderingApp.Models;
+﻿using OrderingApp.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderingApp
@@ -16,10 +10,10 @@ namespace OrderingApp
     {
         //list variable with orderLine already stored;
         public List<OrderLineModel> _currentOrderLineList { get; set; } = new List<OrderLineModel>();
-        
+
         //List variable with checkout controls for recomputation;
         public List<controlCartItem> _currentShoppingCart { get; set; } = new List<controlCartItem>();
-        
+
         //represents the customer callout name
         public string _currentCustomerName { get; set; }
 
@@ -48,7 +42,7 @@ namespace OrderingApp
             {
                 item.DisableControls();
                 flpShoppingCart.Controls.Add(item);
-                
+
             }
             setPricingValues();
             //TODO - cartItem events or don't have buttons on cart summary
@@ -92,7 +86,7 @@ namespace OrderingApp
             this.Close();
             this.Owner.Show();
         }
-        private void GenerateCartSummaryItems() 
+        private void GenerateCartSummaryItems()
         {
             foreach (controlCartItem item in _currentShoppingCart)
             {
@@ -117,15 +111,15 @@ namespace OrderingApp
 
             GlobalConfig.Connection.SaveOrderLine(_currentOrderLineList, order.OrderId);
             this._orderId = order.OrderId;
-            
+
 
             _currentOrder = order;
             BindingSource OrderLineViewBinding = new BindingSource();
             OrderLineViewBinding = GlobalConfig.Connection.ViewOrderReport(OrderBindingSource, this._orderId);
             _OrderLineList = GlobalConfig.Connection.ViewOrderLineReport(_currentOrder);
 
-            using (frmReceipt frm = new frmReceipt(_currentOrder, _OrderLineList, OrderLineViewBinding)) 
-            {               
+            using (frmReceipt frm = new frmReceipt(_currentOrder, _OrderLineList, OrderLineViewBinding))
+            {
                 frm.ShowDialog();
             }
 
@@ -136,6 +130,6 @@ namespace OrderingApp
 
 
         }
-        
+
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderingApp
@@ -19,21 +12,21 @@ namespace OrderingApp
 
         private void frmCustNamePrompt_Load(object sender, EventArgs e)
         {
-           
+
         }
         public string CustName { get; private set; }
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            if (isValidTextBox()) 
+            if (isValidTextBox())
             {
                 this.CustName = tbCustName.Text;
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
             }
-            
+
             Close();
         }
-        private bool isValidTextBox() 
+        private bool isValidTextBox()
         {
             if (tbCustName.Text.Length <= 0)
             {

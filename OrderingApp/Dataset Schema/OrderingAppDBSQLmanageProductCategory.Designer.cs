@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace OrderingApp {
+namespace OrderingApp.Dataset_Schema {
     
     
     /// <summary>
@@ -622,7 +622,7 @@ namespace OrderingApp {
         }
     }
 }
-namespace OrderingApp.OrderingAppDBSQLmanageProductCategoryTableAdapters {
+namespace OrderingApp.Dataset_Schema.OrderingAppDBSQLmanageProductCategoryTableAdapters {
     
     
     /// <summary>

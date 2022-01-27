@@ -10,7 +10,7 @@
 ## Installation
 
 ### Database Setup
-*Below are the steps on how to replicate the database used for this project. `OrderingAppDBSQLmanage` is the target database name on the script, change this if you want, although you might have to change `App.config` connection strings and everything that uses this name.*
+*Below are the steps on how to replicate the database used for this project. `OrderingAppDBSQLmanage` is the target database name on the script, change this if you want, although you might have to change `App.config` connection strings and everything else in the code that uses this name.*
 
 1. Create database with name `OrderingAppDBSQLmanage`
 2. Run SQL script [`OrderingAppDatabaseSchemaScript.sql`](OrderingApp/Database%20Script/OrderingAppDatabaseSchemaScript.sql)

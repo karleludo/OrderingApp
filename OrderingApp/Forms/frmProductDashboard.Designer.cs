@@ -34,7 +34,6 @@ namespace OrderingApp
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
             this.panelDataView = new System.Windows.Forms.Panel();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvItemView = new System.Windows.Forms.DataGridView();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +45,7 @@ namespace OrderingApp
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderingAppProducts = new OrderingApp.OrderingAppProducts();
-            this.orderingAppDBSQLmanageDataSet = new OrderingApp.OrderingAppDBSQLmanageDataSet();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.panelEditItem = new System.Windows.Forms.Panel();
             this.lblAvailNote = new System.Windows.Forms.Label();
             this.gbAvailability = new System.Windows.Forms.GroupBox();
@@ -70,33 +69,28 @@ namespace OrderingApp
             this.lblSelectedItemId = new System.Windows.Forms.Label();
             this.lblProductId = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.productTableAdapter = new OrderingApp.OrderingAppDBSQLmanageDataSetTableAdapters.ProductTableAdapter();
             this.btnEditSelectedItem = new System.Windows.Forms.Button();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.btnCancelChanges = new System.Windows.Forms.Button();
             this.btnDeleteSelectedItem = new System.Windows.Forms.Button();
-            this.productTableDataset_NEW = new OrderingApp.ProductTableDataset_NEW();
-            this.productTableAdapter2 = new OrderingApp.ProductTableDataset_NEWTableAdapters.ProductTableAdapter();
-            this.productTableAdapter3 = new OrderingApp.OrderingAppProductsTableAdapters.ProductTableAdapter();
+            this.productTableAdapter = new OrderingApp.OrderingAppProductsTableAdapters.ProductTableAdapter();
             this.panelHeader.SuspendLayout();
             this.panelDataView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderingAppProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderingAppDBSQLmanageDataSet)).BeginInit();
             this.panelEditItem.SuspendLayout();
             this.gbAvailability.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudModifyValue)).BeginInit();
             this.gbEditPrice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxProductImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productTableDataset_NEW)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddItem
             // 
             this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddItem.Location = new System.Drawing.Point(688, 5);
+            this.btnAddItem.Location = new System.Drawing.Point(704, 75);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(166, 46);
             this.btnAddItem.TabIndex = 0;
@@ -131,31 +125,16 @@ namespace OrderingApp
             this.panelDataView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelDataView.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelDataView.Controls.Add(this.btnRefresh);
             this.panelDataView.Controls.Add(this.dgvItemView);
-            this.panelDataView.Controls.Add(this.btnAddItem);
-            this.panelDataView.Location = new System.Drawing.Point(13, 74);
+            this.panelDataView.Location = new System.Drawing.Point(12, 127);
             this.panelDataView.Name = "panelDataView";
-            this.panelDataView.Size = new System.Drawing.Size(858, 1000);
+            this.panelDataView.Size = new System.Drawing.Size(858, 833);
             this.panelDataView.TabIndex = 3;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(584, 5);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(98, 46);
-            this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Refresh table";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dgvItemView
             // 
             this.dgvItemView.AllowUserToAddRows = false;
             this.dgvItemView.AllowUserToDeleteRows = false;
-            this.dgvItemView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvItemView.AutoGenerateColumns = false;
             this.dgvItemView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvItemView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -168,13 +147,14 @@ namespace OrderingApp
             this.ImageByte,
             this.Price});
             this.dgvItemView.DataSource = this.productBindingSource;
-            this.dgvItemView.Location = new System.Drawing.Point(3, 57);
+            this.dgvItemView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvItemView.Location = new System.Drawing.Point(0, 0);
             this.dgvItemView.MultiSelect = false;
             this.dgvItemView.Name = "dgvItemView";
             this.dgvItemView.ReadOnly = true;
             this.dgvItemView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvItemView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvItemView.Size = new System.Drawing.Size(849, 837);
+            this.dgvItemView.Size = new System.Drawing.Size(858, 833);
             this.dgvItemView.TabIndex = 3;
             this.dgvItemView.SelectionChanged += new System.EventHandler(this.dgvItemView_SelectionChanged);
             // 
@@ -245,10 +225,15 @@ namespace OrderingApp
             this.orderingAppProducts.DataSetName = "OrderingAppProducts";
             this.orderingAppProducts.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // orderingAppDBSQLmanageDataSet
+            // btnRefresh
             // 
-            this.orderingAppDBSQLmanageDataSet.DataSetName = "OrderingAppDBSQLmanageDataSet";
-            this.orderingAppDBSQLmanageDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnRefresh.Location = new System.Drawing.Point(600, 75);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(98, 46);
+            this.btnRefresh.TabIndex = 5;
+            this.btnRefresh.Text = "Refresh table";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // panelEditItem
             // 
@@ -508,10 +493,6 @@ namespace OrderingApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Edit Product Details: ";
             // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
             // btnEditSelectedItem
             // 
             this.btnEditSelectedItem.Location = new System.Drawing.Point(877, 75);
@@ -558,30 +539,23 @@ namespace OrderingApp
             this.btnDeleteSelectedItem.UseVisualStyleBackColor = true;
             this.btnDeleteSelectedItem.Click += new System.EventHandler(this.btnDeleteSelectedItem_Click);
             // 
-            // productTableDataset_NEW
+            // productTableAdapter
             // 
-            this.productTableDataset_NEW.DataSetName = "ProductTableDataset_NEW";
-            this.productTableDataset_NEW.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productTableAdapter2
-            // 
-            this.productTableAdapter2.ClearBeforeFill = true;
-            // 
-            // productTableAdapter3
-            // 
-            this.productTableAdapter3.ClearBeforeFill = true;
+            this.productTableAdapter.ClearBeforeFill = true;
             // 
             // frmProductDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1508, 972);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDeleteSelectedItem);
+            this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.btnCancelChanges);
+            this.Controls.Add(this.panelDataView);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.btnEditSelectedItem);
             this.Controls.Add(this.panelEditItem);
-            this.Controls.Add(this.panelDataView);
             this.Controls.Add(this.panelHeader);
             this.Name = "frmProductDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -593,7 +567,6 @@ namespace OrderingApp
             ((System.ComponentModel.ISupportInitialize)(this.dgvItemView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderingAppProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderingAppDBSQLmanageDataSet)).EndInit();
             this.panelEditItem.ResumeLayout(false);
             this.panelEditItem.PerformLayout();
             this.gbAvailability.ResumeLayout(false);
@@ -602,7 +575,6 @@ namespace OrderingApp
             this.gbEditPrice.ResumeLayout(false);
             this.gbEditPrice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxProductImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productTableDataset_NEW)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -615,8 +587,6 @@ namespace OrderingApp
         private System.Windows.Forms.Panel panelDataView;
         private System.Windows.Forms.DataGridView dgvItemView;
         private System.Windows.Forms.Panel panelEditItem;
-        private OrderingAppDBSQLmanageDataSet orderingAppDBSQLmanageDataSet;
-        private OrderingAppDBSQLmanageDataSetTableAdapters.ProductTableAdapter productTableAdapter;
         private System.Windows.Forms.TextBox tbEditProductName;
         private System.Windows.Forms.RichTextBox rtbEditProductDescription;
         private System.Windows.Forms.Label lblProductDesc;
@@ -644,11 +614,8 @@ namespace OrderingApp
         private System.Windows.Forms.NumericUpDown nudModifyValue;
         private System.Windows.Forms.Label lblCurSign;
         private System.Windows.Forms.TextBox tbPrice;
-        private ProductTableDataset_NEW productTableDataset_NEW;
-        private ProductTableDataset_NEWTableAdapters.ProductTableAdapter productTableAdapter2;
         private OrderingAppProducts orderingAppProducts;
         private System.Windows.Forms.BindingSource productBindingSource;
-        private OrderingAppProductsTableAdapters.ProductTableAdapter productTableAdapter3;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
@@ -657,5 +624,6 @@ namespace OrderingApp
         private System.Windows.Forms.DataGridViewCheckBoxColumn inStock;
         private System.Windows.Forms.DataGridViewImageColumn ImageByte;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private OrderingAppProductsTableAdapters.ProductTableAdapter productTableAdapter;
     }
 }

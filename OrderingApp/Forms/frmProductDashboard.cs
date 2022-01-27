@@ -43,7 +43,7 @@ namespace OrderingApp
         private void frmAdminDashboard_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'orderingAppProducts.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter3.Fill(this.orderingAppProducts.Product);
+            this.productTableAdapter.Fill(this.orderingAppProducts.Product);
 
 
         }
@@ -70,7 +70,7 @@ namespace OrderingApp
 
             MessageBox.Show("Product successfully updated");
 
-            this.productTableAdapter3.Fill(this.orderingAppProducts.Product);
+            this.productTableAdapter.Fill(this.orderingAppProducts.Product);
             refreshGridView();
             setStockAmount();
 
@@ -225,7 +225,7 @@ namespace OrderingApp
             prod.ProductId = this._selectedRowId;
             GlobalConfig.Connection.DeleteProduct(prod);
 
-            this.productTableAdapter3.Fill(this.orderingAppProducts.Product);
+            this.productTableAdapter.Fill(this.orderingAppProducts.Product);
 
             MessageBox.Show("Item successfully deleted.");
 

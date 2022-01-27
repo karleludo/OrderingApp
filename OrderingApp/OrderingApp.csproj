@@ -152,15 +152,15 @@
     <Compile Include="Models\OrderLineView.cs" />
     <Compile Include="Models\OrderModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
-    <Compile Include="Dataset Schema\OrderingAppDBSQLmanageProductCategory.Designer.cs">
+    <Compile Include="OrderingAppDBSQLmanageProductCategory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrderingAppDBSQLmanageProductCategory.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Dataset Schema\OrderingAppProducts.cs">
+    <Compile Include="OrderingAppProducts.cs">
       <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Dataset Schema\OrderingAppProducts.Designer.cs">
+    <Compile Include="OrderingAppProducts.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
@@ -222,26 +222,26 @@
       <DependentUpon>controlProductCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionReport.rdlc" />
-    <None Include="Dataset Schema\OrderingAppDBSQLmanageProductCategory.xsc">
+    <None Include="OrderingAppDBSQLmanageProductCategory.xsc">
       <DependentUpon>OrderingAppDBSQLmanageProductCategory.xsd</DependentUpon>
     </None>
-    <None Include="Dataset Schema\OrderingAppDBSQLmanageProductCategory.xsd">
+    <None Include="OrderingAppDBSQLmanageProductCategory.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>OrderingAppDBSQLmanageProductCategory.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Dataset Schema\OrderingAppDBSQLmanageProductCategory.xss">
+    <None Include="OrderingAppDBSQLmanageProductCategory.xss">
       <DependentUpon>OrderingAppDBSQLmanageProductCategory.xsd</DependentUpon>
     </None>
-    <None Include="Dataset Schema\OrderingAppProducts.xsc">
+    <None Include="OrderingAppProducts.xsc">
       <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
     </None>
-    <None Include="Dataset Schema\OrderingAppProducts.xsd">
+    <None Include="OrderingAppProducts.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>OrderingAppProducts.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Dataset Schema\OrderingAppProducts.xss">
+    <None Include="OrderingAppProducts.xss">
       <DependentUpon>OrderingAppProducts.xsd</DependentUpon>
     </None>
     <None Include="OrderingApp_TemporaryKey.pfx" />

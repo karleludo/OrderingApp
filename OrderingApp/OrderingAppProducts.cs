@@ -1,4 +1,4 @@
-﻿namespace OrderingApp.Dataset_Schema
+﻿namespace OrderingApp
 {
 
 

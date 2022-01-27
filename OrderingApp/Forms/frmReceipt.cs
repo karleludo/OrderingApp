@@ -1,16 +1,8 @@
-﻿using OrderingApp.Models;
-using Dapper;
+﻿using Microsoft.Reporting.WinForms;
+using OrderingApp.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Reporting.WinForms;
-using System.IO;
 
 namespace OrderingApp
 {
@@ -20,14 +12,14 @@ namespace OrderingApp
         OrderModel _orders;
         DataTable _list;
         BindingSource _OrderLineViewBS = new BindingSource();
-        
+
         public frmReceipt(OrderModel orders, DataTable list, BindingSource tempo)
         {
             _orders = orders;
             _list = list;
             _OrderLineViewBS = tempo;
             InitializeComponent();
-            
+
             //generate receipt from database query
 
             //print receipt, either a picture or a text file
@@ -37,10 +29,10 @@ namespace OrderingApp
         {
 
             LoadReport();
-            
+
         }
 
-        private void LoadReport() 
+        private void LoadReport()
         {
             ReportDataSource source = new ReportDataSource("OrderLineViewSP", _list);
             this.rvReceipt.LocalReport.DataSources.Clear();
@@ -64,7 +56,7 @@ namespace OrderingApp
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
             frmStartPage startpage = new frmStartPage();
             startpage.Show();

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderingApp
@@ -79,8 +73,8 @@ namespace OrderingApp
             this.lblProductTotalPrice.Text = _productSubtotalPrice.ToString();
         }
 
-        
-        public double ProductUnitPrice 
+
+        public double ProductUnitPrice
         {
             get { return _productUnitPrice; }
             set { _productUnitPrice = value; }
@@ -107,7 +101,7 @@ namespace OrderingApp
         {
             quantityChanged?.Invoke(this, e);
         }
-        public void DisableControls() 
+        public void DisableControls()
         {
             this.btnDecreaseQuantity.Visible = false;
             this.btnIncreaseQuantity.Visible = false;

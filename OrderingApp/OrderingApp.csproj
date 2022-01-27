@@ -260,9 +260,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\UI Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database Script\OrderingAppDatabaseSchemaScript.sql" />
     <Content Include="Images\Product Images\imageDefault.png" />

@@ -1,14 +1,8 @@
 ﻿using OrderingApp.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderingApp
@@ -29,7 +23,7 @@ namespace OrderingApp
         public frmProductDashboard()
         {
             InitializeComponent();
-            
+
 
 
         }
@@ -76,7 +70,7 @@ namespace OrderingApp
 
         }
 
-        private ProductModel GetValuesFromForm() 
+        private ProductModel GetValuesFromForm()
         {
             ProductModel prod = new ProductModel();
 
@@ -88,27 +82,27 @@ namespace OrderingApp
                 prod.ProductImageByte = this.NewimageByteArray;
             }
             prod.ProductStockQuantity = Convert.ToInt32(this._currentStockAmount);
-            
+
             prod.ProductinStock = isInStock();
             prod.ProductPrice = Convert.ToDouble(tbPrice.Text);
 
             return prod;
         }
 
-        private int isInStock() 
+        private int isInStock()
         {
             if (cbInStock.Checked)
             {
                 return 1;
             }
-            else 
+            else
             {
                 return 0;
             }
         }
-        private void refreshGridView() 
+        private void refreshGridView()
         {
-            
+
             dgvItemView.Update();
             dgvItemView.Refresh();
             panelDataView.Update();
@@ -132,7 +126,7 @@ namespace OrderingApp
 
             gbEditPrice.Enabled = true;
             gbAvailability.Enabled = true;
-            
+
             //tbStockAmount.ReadOnly = false;
             nudModifyValue.ReadOnly = false;
 
@@ -163,19 +157,19 @@ namespace OrderingApp
                 Image selectedRowImage = byteArrayToImage(tempImage);
                 pBoxProductImage.Image = selectedRowImage;
 
-                
-                lblSelectedItemId.Text = Convert.ToString(selectedRow.Cells[0].Value); 
+
+                lblSelectedItemId.Text = Convert.ToString(selectedRow.Cells[0].Value);
                 tbEditProductName.Text = Convert.ToString(selectedRow.Cells[1].Value);
                 rtbEditProductDescription.Text = Convert.ToString(selectedRow.Cells[2].Value);
                 _currentStockAmount = Convert.ToInt32(selectedRow.Cells[4].Value);
                 tbStockAmount.Text = _currentStockAmount.ToString();
-                
+
                 //if inStock flag
                 if (Convert.ToBoolean(selectedRow.Cells[5].Value))
                 {
                     cbInStock.Checked = true;
                 }
-                else 
+                else
                 {
                     cbInStock.Checked = false;
                 }
@@ -185,7 +179,7 @@ namespace OrderingApp
             }
 
         }
-        
+
         private void dgvItemView_SelectionChanged(object sender, EventArgs e)
         {
             imageChanged = false;
@@ -193,12 +187,12 @@ namespace OrderingApp
             PopulateForm();
             DisableForm();
         }
-        private void DisableForm() 
+        private void DisableForm()
         {
-            
+
             panelEditItem.BackColor = Color.Silver;
 
-            
+
             tbEditProductName.ReadOnly = true;
             rtbEditProductDescription.ReadOnly = true;
 
@@ -238,12 +232,12 @@ namespace OrderingApp
         }
 
 
-        private void setStockAmount() 
+        private void setStockAmount()
         {
             tbStockAmount.Text = _currentStockAmount.ToString();
         }
 
-        
+
 
         private void btnAddStock_Click(object sender, EventArgs e)
         {
@@ -259,15 +253,15 @@ namespace OrderingApp
             //TODO - fix this, stock amount changes on add decrease click
             int modValue;
             modValue = Convert.ToInt32(nudModifyValue.Value);
-            
+
             if (_currentStockAmount <= modValue)
             {
                 _currentStockAmount = 0;
             }
-            else 
+            else
             {
                 _currentStockAmount = _currentStockAmount - modValue;
-                
+
             }
             setStockAmount();
         }
@@ -285,10 +279,10 @@ namespace OrderingApp
 
                     imageChanged = true;
                     lblImageStatus.Visible = true;
-                    
+
                 }
 
-                if (imageChanged) 
+                if (imageChanged)
                 {
                     lblImageStatus.Text = "new image selected";
 
@@ -299,7 +293,7 @@ namespace OrderingApp
 
                         lblImageStatus.ForeColor = System.Drawing.Color.Green;
                         lblImageStatus.Text = "coversion success";
-                        
+
                     }
                     //catch potential image convert errors
                     catch (ArgumentException err)
@@ -324,7 +318,7 @@ namespace OrderingApp
 
         private void tbStockAmount_TextChanged(object sender, EventArgs e)
         {
-            
+
             setStockAmount();
             refreshGridView();
         }

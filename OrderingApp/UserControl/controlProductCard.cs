@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderingApp
 {
     public partial class controlProductCard : UserControl
-    {        
+    {
         public controlProductCard()
         {
             InitializeComponent();
@@ -30,13 +25,13 @@ namespace OrderingApp
         private int _productCategoryId;
 
 
-        public int ProductId 
+        public int ProductId
         {
             get { return _productId; }
             set { _productId = value; }
         }
 
-        public Image Icon 
+        public Image Icon
         {
             get { return _icon; }
             set { _icon = value; pbProductImage.Image = value; }
@@ -63,7 +58,7 @@ namespace OrderingApp
         public int ProductCategoryId
         {
             get { return _productCategoryId; }
-            set {_productCategoryId = value; }
+            set { _productCategoryId = value; }
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
@@ -71,6 +66,6 @@ namespace OrderingApp
             AddToCartEvent?.Invoke(this, e);
         }
 
-        
+
     }
 }

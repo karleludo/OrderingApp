@@ -1,30 +1,24 @@
 ﻿using OrderingApp.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderingApp
 {
     public partial class frmAddItem : Form
     {
-       
+
 
         private bool fileImageSelected = false;
         private string currentImagePath;
         private byte[] _imageByteArray;
-        
+
         public frmAddItem()
         {
             InitializeComponent();
-            
+
         }
 
 
@@ -35,7 +29,7 @@ namespace OrderingApp
                 ProductModel model = new ProductModel();
                 model.ProductName = tbItemName.Text;
                 model.ProductDescription = tbItemDescription.Text;
-                model.ProductCategoryId = cmbItemCategory.SelectedIndex+1;
+                model.ProductCategoryId = cmbItemCategory.SelectedIndex + 1;
                 model.ProductImageByte = _imageByteArray;
 
                 GlobalConfig.Connection.CreateProduct(model);
@@ -49,12 +43,12 @@ namespace OrderingApp
             }
 
         }
-        
-        private bool ValidateForm() 
+
+        private bool ValidateForm()
         {
             bool output = true;
 
-            if (tbItemName.Text.Length == 0) 
+            if (tbItemName.Text.Length == 0)
             {
                 output = false;
             }
@@ -103,7 +97,7 @@ namespace OrderingApp
                 else
                 {
                     try
-                    {              
+                    {
                         Image img = Image.FromFile(currentImagePath);
                         _imageByteArray = imageToByteArray(img);
 
@@ -148,7 +142,7 @@ namespace OrderingApp
             return returnImage;
         }
 
-       
+
         private void frmAddItem_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'orderingAppDBSQLmanageProductCategory.Category' table. You can move, or remove it, as needed.

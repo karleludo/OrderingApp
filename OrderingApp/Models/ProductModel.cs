@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrderingApp.Models
+﻿namespace OrderingApp.Models
 {
     public class ProductModel
     {
@@ -36,13 +30,13 @@ namespace OrderingApp.Models
         /// <summary>
         /// Represents what list of categories a particular product belongs to.
         /// </summary>
-        
+
         public int ProductCategoryId { get; set; }
         /// <summary>
         /// Represent the sizes of a particular product and their prices.
         /// </summary>
         public double ProductPrice { get; set; }
-        
+
         /// <summary>
         /// Represents if the Item is currently available in Stock.
         /// </summary>

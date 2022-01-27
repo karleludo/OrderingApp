@@ -1,13 +1,9 @@
 ﻿using OrderingApp.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OrderingApp
@@ -18,7 +14,7 @@ namespace OrderingApp
         private readonly DataTable _allProductsForView = GlobalConfig.Connection.ProductViewGetAll();
 
         private string _customerName;
-        
+
         public frmOrderPage()
         {
             InitializeComponent();
@@ -31,7 +27,7 @@ namespace OrderingApp
             {
                 _customerName = customerPrompt.CustName;
             }
-            else 
+            else
             {
                 this.Close();
                 frmStartPage start = new frmStartPage();
@@ -57,7 +53,7 @@ namespace OrderingApp
                         {
                             foreach (DataRow row in dt.Rows)
                             {
-                                
+
                                 prodCards[i] = new controlProductCard();
                                 prodCards[i].ProductId = (int)row["ProductId"];
                                 prodCards[i].ProductHeader = row["Name"].ToString();
@@ -72,7 +68,7 @@ namespace OrderingApp
                                     prodCards[i].Visible = false;
                                 }
                                 flpProductShelf.Controls.Add(prodCards[i]);
-                                
+
                                 prodCards[i].AddToCartEvent += new EventHandler(AddToCart_Click);
 
                             }
@@ -82,12 +78,12 @@ namespace OrderingApp
                     }
                 }
             }
-            else 
+            else
             {
                 MessageBox.Show("There are no available items.");
             }
         }
-        
+
         protected void AddToCart_Click(object sender, EventArgs e)
         {
             controlProductCard objProd = (controlProductCard)sender;
@@ -105,14 +101,14 @@ namespace OrderingApp
 
             controlCartItem result = _shoppingCart.Find(x => x.ProductId == objProd.ProductId);
 
-            if (result!=null)
+            if (result != null)
             {
-                
+
                 result.ProductQuantity += 1;
             }
-            else 
+            else
             {
-                
+
                 _shoppingCart.Add(cartItem);
                 cartItem.incQuantityEvent += new EventHandler(increase_Click);
                 cartItem.decQuantityEvent += new EventHandler(decrease_Click);
@@ -123,10 +119,10 @@ namespace OrderingApp
 
 
         }
-        private void increase_Click(object sender, EventArgs e) 
+        private void increase_Click(object sender, EventArgs e)
         {
             controlCartItem cartItem = (controlCartItem)sender;
-            cartItem.ProductQuantity +=1;
+            cartItem.ProductQuantity += 1;
             RenderShoppingCart();
         }
         private void decrease_Click(object sender, EventArgs e)
@@ -137,13 +133,13 @@ namespace OrderingApp
                 _shoppingCart.Remove(cartItem);
                 flpShoppingCart.Controls.Remove(cartItem);
             }
-            else 
+            else
             {
                 cartItem.ProductQuantity -= 1;
             }
             RenderShoppingCart();
         }
-        
+
         private void removeCartItem_Click(object sender, EventArgs e)
         {
             controlCartItem cartItem = (controlCartItem)sender;
@@ -151,19 +147,19 @@ namespace OrderingApp
             flpShoppingCart.Controls.Remove(cartItem);
             RenderShoppingCart();
         }
-        private void RenderShoppingCart() 
+        private void RenderShoppingCart()
         {
-            foreach(controlCartItem item in _shoppingCart)
+            foreach (controlCartItem item in _shoppingCart)
             {
                 item.SetSubtotalText();
                 flpShoppingCart.Controls.Add(item);
                 item.EnableControls();
-                
+
             }
             setPricingValues();
-            
+
         }
-        private void cartItemQuantityChanged(object sender, EventArgs e) 
+        private void cartItemQuantityChanged(object sender, EventArgs e)
         {
             controlCartItem cartItem = (controlCartItem)sender;
             int quantity = cartItem.ProductQuantity;
@@ -214,16 +210,16 @@ namespace OrderingApp
                 checkout.ShowDialog(this);
                 RenderShoppingCart();
             }
-            else 
+            else
             {
                 MessageBox.Show("There are no items in your Shopping cart.");
-                
+
             }
-            
-            
+
+
 
         }
-        private void setPricingValues() 
+        private void setPricingValues()
         {
             double temp = 0; ;
             foreach (controlCartItem item in _shoppingCart)
@@ -240,19 +236,19 @@ namespace OrderingApp
             double taxAdded = discountedPrice * tax;
 
 
-            double total =  discountedPrice + taxAdded;
+            double total = discountedPrice + taxAdded;
 
-            
+
             //set label.Text
             lblSubtotalValue.Text = temp.ToString();
 
-            lblDiscountShow.Text = (discount*100).ToString()+"%";
+            lblDiscountShow.Text = (discount * 100).ToString() + "%";
             lblDiscountValue.Text = discountDeducted.ToString();
 
-            lblTaxShow.Text = (tax*100).ToString()+"%";
+            lblTaxShow.Text = (tax * 100).ToString() + "%";
             lblTaxValue.Text = taxAdded.ToString();
             lblTotalValue.Text = total.ToString();
-            
+
             //TODO - probably assign these to global variables;
             //TODO - assign these to property values so I don't have to recompute on the checkout form
         }
@@ -262,7 +258,7 @@ namespace OrderingApp
             {
                 return true;
             }
-            else 
+            else
             {
                 return false;
             }

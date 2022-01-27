@@ -135,6 +135,7 @@ namespace OrderingApp
 
         // TODO - migrate this function to product class
         // also optimize this
+        // from -https://stackoverflow.com/a/3801289/5404481
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
             MemoryStream ms = new MemoryStream(byteArrayIn);
